@@ -7,29 +7,11 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     const form = event.target;
     const formData = new FormData(form);
 
-    let nameToSend = formData.get("nome")
-    let qtsPessoas = formData.get("quantas-pessoas")
-    // Simulate form submission using AJAX
 
-
-    const url = "https://festalucasapi.azurewebsites.net/confirmar_ida"; // Replace with your API endpoint
-
-    const postData = {
-        nome:nameToSend,
-        quantasPessoas: qtsPessoas
-    };
-
-    const requestOptions = {
+    fetch("/api/save-data", {
         method: "POST",
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(postData)
-    };
-    
-    fetch(url, requestOptions)
+        body: formData
+    })
     .then(response => response.json())
     .then(data => {
         console.log("Response:", data);
@@ -37,5 +19,4 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     .catch(error => {
         console.error("Error:", error);
     });
-
 });
