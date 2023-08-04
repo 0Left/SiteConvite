@@ -29,4 +29,8 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     .catch(error => {
         console.error("Error:", error);
     });
+
+    let formContent = document.getElementById("myForm")
+    formContent.innerHTML = "Confirmação Enviada... </br></br>Esperamos sua presença!</br></br></br>"
+
 });
