@@ -22,7 +22,7 @@ body {
 #ConfirmarPresenca {
     position: absolute;
     top: 80%;
-    left: 35%;
+    left: 40%;
     transform: translate(-50%, -50%);
     z-index: 2; /* Ensure the button appears above the image */
 }
