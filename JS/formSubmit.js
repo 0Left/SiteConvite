@@ -6,11 +6,21 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     // For example, you can access form data and perform an AJAX request
     const form = event.target;
     const formData = new FormData(form);
+    
+    const postData = {
+        nome:formData.get("nome"),
+        quantasPessoas: formData.get("quantas-pessoas")
+    };
+    
+    console.log(postData);
+    console.log(JSON.stringify(postData));
 
-
-    fetch("/api/save-data", {
+    fetch("http://localhost:3000/api/save-data", {
         method: "POST",
-        body: formData
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postData)
     })
     .then(response => response.json())
     .then(data => {
