@@ -9,9 +9,6 @@ body {
     z-index: 0;
 }
 
-.content {
-    margin-left: 200px;
-}
 .gif-container {
     /* Set the maximum width and height for the container */
     max-width: 100%;
