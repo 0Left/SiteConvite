@@ -8,6 +8,10 @@ body {
     background-color: #18241e;
     z-index: 0;
 }
+
+.content {
+    margin-left: 200px;
+}
 .gif-container {
     /* Set the maximum width and height for the container */
     max-width: 100%;
@@ -93,6 +97,7 @@ body {
 
 /* Additional styling for the minus button */
 .minus {
+    margin-left: 10px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }

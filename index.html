@@ -4,35 +4,41 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Structure with GIF Container</title>
+    <title>Venha para o meu aniversário!</title>
 </head>
 <body>
-    <div class="gif-container">
-        <!-- Replace 'path/to/your/gif.gif' with the actual path to your GIF -->
-        <img id="backgroundGif" src="src/pt1.gif" alt="Animated GIF">
-        <button id ="ConfirmarPresenca" class="open-button" onclick="openModal()">Eu vou!</button>
-    </div>
+    <div class="content">
 
-    <!-- Modal overlay -->
-    <div class="modal-overlay" id="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <form id="myForm">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br><br>
+        <div class="gif-container">
+            <!-- Replace 'path/to/your/gif.gif' with the actual path to your GIF -->
+            <img id="backgroundGif" src="src/pt1.gif" alt="Animated GIF">
+            <button id ="ConfirmarPresenca" class="open-button" onclick="openModal()">Eu vou!</button>
+        </div>
         
-                <div class="input-group">
-                    <label for="quantas-pessoas">Quantas Pessoas:</label>
-                    <div class="quantity-input">
-                        <button type="button" class="minus">-</button>
-                        <input type="number" id="quantas-pessoas" name="quantas-pessoas" value="1" min="1">
-                        <button type="button" class="plus">+</button>
+        <!-- Modal overlay -->
+        <div class="modal-overlay" id="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <form id="myForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                    
+                    <div class="input-group">
+                        <label for="quantas-pessoas">Quantas Pessoas:   </label>
+                        <div class="quantity-input">
+                            <button type="button" class="minus">-</button>
+                            <input type="number" id="quantas-pessoas" name="quantas-pessoas" value="1" min="1">
+                            <button type="button" class="plus">+</button>
+                        </div>
                     </div>
-                </div>
-        
-                <input type="submit" value="Enviar">
-            </form>
-            <button class="close-modal-button" onclick="closeModal()">Fechar</button>
+                    
+                    <input type="submit" value="Enviar">
+                </form>
+                <button class="close-modal-button" onclick="closeModal()">Fechar</button>
+                <br>
+                <br>
+                
+            </div>
         </div>
     </div>
 </body>
