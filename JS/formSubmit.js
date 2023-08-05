@@ -12,15 +12,9 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         quantasPessoas: formData.get("quantas-pessoas")
     };
     
-    console.log(postData);
-    console.log(JSON.stringify(postData));
 
-    fetch("http://localhost:3000/api/save-data", {
-        method: "POST",
-        headers:{
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(postData)
+    fetch(`https://script.google.com/macros/s/AKfycbwW45HYIA37vDa4Hg6hAoGijIcVvRILoNgJbjaA1no8F-gcQZASa2hZPvXN2S3j8QvqTw/exec?key=LucasFesta&modo=post&nome=${postData.nome}&qtsPessoas=${postData.quantasPessoas}`, {
+        method: "GET"
     })
     .then(response => response.json())
     .then(data => {
